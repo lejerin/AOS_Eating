@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_nav_graph.xml"
+    app:startDestination="@id/homeFragment">
+
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="desla.aos.eating.ui.main.home.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_mapActivity"
+            app:destination="@id/mapActivity" />
+        <action
+            android:id="@+id/action_homeFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_filterFragment"
+            app:destination="@id/filterFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_postActivity"
+            app:destination="@id/postActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/mapActivity"
+        android:name="desla.aos.eating.ui.map.MapActivity"
+        android:label="MapActivity" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="desla.aos.eating.ui.main.home.search.SearchFragment"
+        android:label="SearchFragment" />
+    <fragment
+        android:id="@+id/filterFragment"
+        android:name="desla.aos.eating.ui.main.home.filter.FilterFragment"
+        android:label="FilterFragment" />
+    <activity
+        android:id="@+id/postActivity"
+        android:name="desla.aos.eating.ui.main.home.post.PostActivity"
+        android:label="PostActivity" />
+    <fragment
+        android:id="@+id/likeFragment"
+        android:name="desla.aos.eating.ui.main.like.LikeFragment"
+        android:label="LikeFragment" />
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="desla.aos.eating.ui.main.user.setting.SettingFragment"
+        android:label="SettingFragment" >
+        <action
+            android:id="@+id/action_settingFragment_to_opensourceFragment"
+            app:destination="@id/opensourceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="desla.aos.eating.ui.main.user.UserFragment"
+        android:label="UserFragment" >
+        <action
+            android:id="@+id/action_userFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
+        <action
+            android:id="@+id/action_userFragment_to_activeListFragment"
+            app:destination="@id/activeListFragment" />
+        <action
+            android:id="@+id/action_userFragment_to_myReviewFragment"
+            app:destination="@id/myReviewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/opensourceFragment"
+        android:name="desla.aos.eating.ui.main.user.setting.OpensourceFragment"
+        android:label="OpensourceFragment" />
+    <fragment
+        android:id="@+id/activeListFragment"
+        android:name="desla.aos.eating.ui.main.user.active.ActiveListFragment"
+        android:label="ActiveListFragment" />
+    <fragment
+        android:id="@+id/myReviewFragment"
+        android:name="desla.aos.eating.ui.main.user.MyReviewFragment"
+        android:label="MyReviewFragment" />
+</navigation>
